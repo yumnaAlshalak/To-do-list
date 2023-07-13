@@ -83,7 +83,12 @@ function onSubmit(e) {
         deletebutton.addEventListener('click', e => {
             e.preventDefault();
             document.getElementById(deletebutton.id).remove();
-            lists.splice(deletebutton.id,1);
+            for (var i = lists.length - 1; i >= 0; i--) {
+            if (lists[i] === lists[deletebutton.id]) {
+             lists.splice(i, 1);
+             
+            }
+           }
             // document.querySelector('li').remove();
             // document.querySelector('input').remove();
             // document.querySelector('button').remove();
