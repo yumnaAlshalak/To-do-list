@@ -2,28 +2,38 @@
     margin: 0;
     padding: 0;
     box-sizing: border-box;
+    
   }
   
   body {
     font-family: Arial, Helvetica, sans-serif;
+    background: #bda7b8;
     /* line-height: 1.6; */
   }
   
   ul {
     list-style: none;
+    
     /* position: absolute; */
   }
-  
-  ul li {
-    padding: 10px;
-    background: #f4f4f4;
-    margin: 0  0  0 10px;
-    /* position: relative; */
-    width: 80%;
-  }
+  label {
 
+    font-weight: bold;
+  }
+  ul li {
+    padding: 0 50px;
+    background: #bda7b8;
+    /* margin: 0  0  0 0; */
+    /* position: relative; */
+    width: 100%;
+  }
+    li1 {
+    margin-top: 50px;
+    padding-top:50px;
+    
+  }
   header {
-    background: #f4f4f4;
+    background: #edbff3;
     padding: 1rem;
     text-align: center;
   }
@@ -37,7 +47,7 @@
   
   #input1 {
     padding: 2rem;
-    background: #f4f4f4;
+    background: #edbff3;
   }
   
   /* #input1 label {
@@ -45,13 +55,17 @@
   }
    */
   #input1 input[type='text'] {
-    width: 70%;
+    width: 100%;
     padding: 8px;
     margin-bottom: 10px;
     border-radius: 5px;
     border: 1px solid #ccc;
+    font-weight: bold;
   }
-  
+  #check {
+  margin: 0;
+  padding: 0;
+  }
   .btn {
     display: block;
     width: 10em;
@@ -60,7 +74,19 @@
     background: #333;
     color: #fff;
     border-radius: 5px;
-    margin: 5px 0;
+    margin: 0 0 10px 50px ;
+    
+  }
+  .dbtn {
+    /* display: block; */
+    /* width: 5em; */
+    padding: 10px 150px;
+    border: 0;
+    background: #bda7b8;
+    color: #fff;
+    /* border-radius: 5px; */
+    margin: 0 0 10px 50px ;
+    color: red;
   }
   #users{
     display: block; 
