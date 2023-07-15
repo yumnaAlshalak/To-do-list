@@ -19,7 +19,7 @@ for (i = 0; i < lists.length; i++) {
     const deletebutton = document.createElement('button');
     deletebutton.type = "button";
     // deletebutton.name = "name";
-    deletebutton.value = "button";
+    deletebutton.value = lists[i];
     deletebutton.id = i;
     deletebutton.className = "dbtn";
     deletebutton.appendChild(document.createTextNode(`X`));
@@ -33,14 +33,10 @@ for (i = 0; i < lists.length; i++) {
     deletebutton.addEventListener('click', e => {
         e.preventDefault();
         document.getElementById(deletebutton.id).remove();
-        for (var i = lists.length - 1; i >= 0; i--) {
-            if (lists[i] === lists[deletebutton.id]) {
-             lists.splice(i, 1);
-             
-            }
-           }
-
-    });
+        Index=lists.indexOf(deletebutton.value);
+        lists.splice(Index,1);
+        console.log(lists);
+       });
     
 }
 let id = i;
@@ -69,7 +65,7 @@ function onSubmit(e) {
         const deletebutton = document.createElement('button');
         deletebutton.type = "button";
         // deletebutton.name = "name";
-        deletebutton.value = "button";
+        deletebutton.value = text.value;
         deletebutton.id = i;
         deletebutton.className = "dbtn";
         lists.push(text.value);
@@ -83,12 +79,9 @@ function onSubmit(e) {
         deletebutton.addEventListener('click', e => {
             e.preventDefault();
             document.getElementById(deletebutton.id).remove();
-            for (var i = lists.length - 1; i >= 0; i--) {
-            if (lists[i] === lists[deletebutton.id]) {
-             lists.splice(i, 1);
-             
-            }
-           }
+            Index=lists.indexOf(deletebutton.value);
+            lists.splice(Index,1);
+            console.log(lists);
             // document.querySelector('li').remove();
             // document.querySelector('input').remove();
             // document.querySelector('button').remove();
